@@ -63,10 +63,11 @@ def cli
         system("clear")
         puts matches[ARGV[1].to_i].get_score
         
-        sleep(5)
+        sleep(20)
       end  
   end
-  
+rescue OpenURI::HTTPError
+  puts "Looks like our provider API is down. :("
 end
 
 def usage
