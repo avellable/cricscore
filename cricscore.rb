@@ -34,7 +34,7 @@ def get_matches
 end
 
 def display_matches(matches)
-  puts matches.each {|match| match.display matches.index(match)}
+  matches.each {|match| match.display matches.index(match)}
 end
 
 def cli
